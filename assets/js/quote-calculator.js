@@ -316,6 +316,12 @@
             step2.style.visibility = 'hidden';
             step2.style.opacity = '0';
         }
+        
+        // Ensure cost summary is hidden on initialization (especially for mobile view)
+        const costSummary = document.querySelector('.quote-cost-summary');
+        if (costSummary) {
+            costSummary.style.display = 'none';
+        }
     }
 
     // Show step function
@@ -395,6 +401,11 @@
         // Hide material specs
         const specsContainer = document.getElementById('material-specs-container');
         if (specsContainer) specsContainer.style.display = 'none';
+        // Hide cost summary
+        const costSummary = document.querySelector('.quote-cost-summary');
+        if (costSummary) {
+            costSummary.style.display = 'none';
+        }
         // Ensure step 1 is visible and step 2 is hidden
         const step1 = document.getElementById('quote-step-1');
         const step2 = document.getElementById('quote-step-2');

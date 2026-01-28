@@ -113,8 +113,8 @@ AOS.init;
 AOS.init({disable: 'mobile'});
 
 //========== NICE SELECT ============= //
-// Exclude quote calculator form selects from nice-select to avoid duplication
-$('select').not('#quote-calculator-form select').not('.quote-form-group select').not('#construction-area').not('#construction-variant').not('.addon-table-mobile-select').niceSelect();
+// Exclude quote calculator form selects and interior design calculator form selects from nice-select to avoid duplication
+$('select').not('#quote-calculator-form select').not('.quote-form-group select').not('#construction-area').not('#construction-variant').not('.addon-table-mobile-select').not('#idesign-calculator-form select').not('#idesign-bhk').not('#idesign-plan').niceSelect();
 
 //========== CASE IMAGE ============= //
 $('.cs_hover_active').hover(function () {
